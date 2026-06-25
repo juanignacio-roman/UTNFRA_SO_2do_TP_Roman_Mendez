@@ -275,3 +275,23 @@ ls -l
 cd
 git clone https://github.com/juanignacio-roman/UTNFRA_SO_2do_TP_Roman_Mendez.git
 history -a
+cp ~/.bash_history ~/UTNFRA_SO_2do_TP_Roman_Mendez/.bash_history
+cp -r ~/UTN-FRA_SO_Examenes/202406 ~/UTNFRA_SO_2do_TP_Roman_Mendez/
+cp -r ~/RTA_Examen_20260625 ~/UTNFRA_SO_2do_TP_Roman_Mendez/
+cd UTNFRA_SO_2do_TP_Roman_Mendez/
+git add .
+git commit -m "Entrega final de parcial - Roman Mendez"
+git config --glolbal user.email "juaniiomann@gmail.com"
+git config --global user.email "juaniiomann@gmail.com"
+git config --global user.name "Juan Ignacio Román Méndez"
+git commit -m "Entrega final de parcial - Roman Mendez"
+git push origin main
+tree -a -I .git
+sudo apt install tree -y
+tree -a -I .git
+cd
+sudo cp ~/RTA_Examen_20260625/Punto_B.sh /usr/local/bin/RomanAltaUser-Groups.sh
+sudo chmod +x /usr/local/bin/RomanAltaUser-Groups.sh
+cp ~/RTA_Examen_20260625/Punto_B.sh ~/UTNFRA_SO_2do_TP_Roman_Mendez/RTA_Examen_20260625/RomanAltaUser-Groups.sh
+historu -a
+history -a
