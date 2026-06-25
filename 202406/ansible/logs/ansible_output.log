@@ -1,0 +1,45 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-25 10:28:12,651 p=1936 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2026-06-25 10:28:12,937 p=1936 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************************
+2026-06-25 10:28:12,957 p=1936 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************************
+2026-06-25 10:28:13,100 p=1936 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2026-06-25 10:28:14,385 p=1936 u=vagrant n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2026-06-25 10:28:14,386 p=1936 u=vagrant n=ansible | ok: [localhost]
+2026-06-25 10:28:14,395 p=1936 u=vagrant n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************
+2026-06-25 10:28:14,431 p=1936 u=vagrant n=ansible | included: 2do_parcial for localhost
+2026-06-25 10:28:14,438 p=1936 u=vagrant n=ansible | TASK [2do_parcial : Crear estructura de directorios en /tmp/2do_parcial] ***********************************************************************
+2026-06-25 10:28:14,830 p=1936 u=vagrant n=ansible | changed: [localhost] => (item=/tmp/2do_parcial)
+2026-06-25 10:28:15,053 p=1936 u=vagrant n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/alumno)
+2026-06-25 10:28:15,276 p=1936 u=vagrant n=ansible | changed: [localhost] => (item=/tmp/2do_parcial/equipo)
+2026-06-25 10:28:15,286 p=1936 u=vagrant n=ansible | TASK [2do_parcial : Generar datos_alumno.txt] **************************************************************************************************
+2026-06-25 10:28:15,991 p=1936 u=vagrant n=ansible | changed: [localhost]
+2026-06-25 10:28:16,001 p=1936 u=vagrant n=ansible | TASK [2do_parcial : Generar datos_equipo.txt] **************************************************************************************************
+2026-06-25 10:28:16,481 p=1936 u=vagrant n=ansible | changed: [localhost]
+2026-06-25 10:28:16,489 p=1936 u=vagrant n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores] ***************************************************************************
+2026-06-25 10:28:16,965 p=1936 u=vagrant n=ansible | changed: [localhost]
+2026-06-25 10:28:16,981 p=1936 u=vagrant n=ansible | TASK [Otra tarea] ******************************************************************************************************************************
+2026-06-25 10:28:16,999 p=1936 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2026-06-25 10:28:17,000 p=1936 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************************
+2026-06-25 10:28:17,001 p=1936 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2026-06-25 10:28:17,002 p=1936 u=vagrant n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
