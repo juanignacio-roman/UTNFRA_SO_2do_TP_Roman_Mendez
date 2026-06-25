@@ -295,3 +295,21 @@ sudo chmod +x /usr/local/bin/RomanAltaUser-Groups.sh
 cp ~/RTA_Examen_20260625/Punto_B.sh ~/UTNFRA_SO_2do_TP_Roman_Mendez/RTA_Examen_20260625/RomanAltaUser-Groups.sh
 historu -a
 history -a
+cp ~/.bash_history ~/UTNFRA_SO_2do_TP_Roman_Mendez/.bash_history
+cd UTNFRA_SO_2do_TP_Roman_Mendez/
+git add .
+git commit -m "Entrega final corregida"
+git push origin main
+ls
+cd 202406
+cd docker
+docker login
+docker build -t juanignacioromanmendez/web1-roman:latest .
+sudo docker build -t juanignacioromanmendez/web1-roman:latest .
+sudo docker push juanignacioromanmendez/web1-roman:latest
+echo "docker run -d -p 8080:80 juanignacioromanmendez/web1-roman:latest" > run.sh
+sudo docker login -u juanignacioromanmendez
+sudo docker push juanignacioromanmendez/web1-roman:latest
+echo "docker run -d -p 8080:80 juanignacioromanmendez/web1-roman:latest" > run.sh
+cp run.sh ~/UTNFRA_SO_2do_TP_Roman_Mendez/RTA_Examen_20260625/Punto_C.sh
+history -a
